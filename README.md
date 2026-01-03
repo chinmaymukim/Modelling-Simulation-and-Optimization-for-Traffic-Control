@@ -1,131 +1,114 @@
-🚦 Traffic Control Simulation using Modelling, Simulation & Optimization
+🚦 Traffic Control Simulation
+Modelling, Simulation & Optimization
 
 Author: Chinmay Mukim
-Student ID: x21145024
-Institution: National College of Ireland
-Module: Modelling, Simulation, and Optimization
+🎓 National College of Ireland | Modelling, Simulation & Optimization
+🧠 Python • Simulation • Probabilistic Modeling
 
-📌 Project Overview
+🔍 Overview
 
-This project focuses on designing, simulating, and evaluating a traffic control mechanism for a real-world inspired road crossing scenario. The goal was to model vehicle behavior, analyze traffic flow, and optimize crossing safety and efficiency using simulation techniques.
+A traffic flow simulation project that models and optimizes vehicle movement at a school–village crossroad intersecting a busy national road during morning rush hours.
 
-The scenario represents a busy national road intersecting a school–village crossroad, where traffic congestion and unsafe crossings are common during morning rush hours. Through baseline and multiple simulation studies, this project investigates how vehicle speed, arrival rates, and driving parameters impact safety, waiting time, and travel time.
+The project explores how vehicle speed, arrival rates, and driving behavior affect:
 
-🛣️ Problem Scenario
+Safety (collision avoidance)
 
-A National Road (North–South) with continuous traffic flow
+Waiting time
 
-A Crossroad (East–West) connecting a village and a school
+Travel efficiency
 
-Peak rush hour: 8:30 AM – 9:00 AM
+All conclusions are backed by multiple simulation studies and statistical analysis.
 
-Around 50 cars crossing during school hours
+🛣️ Scenario
 
-No traffic lights — crossing decisions depend on vehicle behavior and timing
+National Road: North–South (continuous traffic, no stopping)
 
-The challenge was to enable safe and efficient crossings without stopping national road traffic.
+Crossroad: East–West (village ↔ school)
 
-🎯 Objectives
+Rush Hour: 8:30 – 9:00 AM
 
-✔ Build a baseline traffic simulation under fixed assumptions
-✔ Model vehicle arrival using probabilistic distributions
-✔ Analyze travel time, waiting time, and traffic flow
-✔ Conduct multiple simulation studies to test robustness
-✔ Evaluate statistical significance of speed and flow changes
-✔ Identify an optimal traffic configuration without collisions
+Traffic Volume: ~50 vehicles crossing
 
-🧠 Methodology
+Traffic Lights: ❌ None
 
-The project was executed in three structured phases:
+🎯 Goal:
+Enable safe and efficient crossings without interrupting national road traffic.
 
+🎯 Project Goals
+
+Build a baseline traffic simulation
+
+Model vehicle arrivals using probability distributions
+
+Measure travel time, waiting time & traffic flow
+
+Run multiple simulations to validate results
+
+Identify a collision-free optimal configuration
+
+⚙️ How It Works
+🧠 Modeling Approach
+
+Vehicle arrivals generated using Exponential Distribution
+
+Randomness handled via Inverse Transform Sampling
+
+Fixed random seed for reproducibility
+
+Realistic vehicle dynamics (speed, braking, acceleration)
+
+🧪 Simulation Phases
 1️⃣ Baseline Simulation
 
-Simulation duration: 30 minutes (1800 seconds)
+⏱ Duration: 30 minutes (1800 seconds)
 
-Vehicle arrivals modeled using Exponential Distribution
+🚗 National road speed: 100 km/h
 
-Assumed:
+🚙 Crossroad speed: 50 km/h
 
-National road speed: 100 km/h
+Result
 
-Crossroad speed: 50 km/h
+Avg travel time: ~2.75 min
 
-Random seed fixed to ensure reproducibility
+Avg waiting time: ~3.1 min
 
-Vehicle dynamics tuned to avoid unrealistic crashes
+✅ Stable, collision-free traffic
 
-📊 Outcome:
+2️⃣ Comparative Simulation Studies
+Study	Key Change	Result
+Simulation 1	Higher flow & aggressive braking	❌ Collisions
+Simulation 2	Reduced crossroad speed	❌ Instability
+Simulation 3	Optimized speed & arrival rates	✅ Optimal
 
-Average travel time ≈ 2.75 minutes
+✔ Simulation Study 3 achieved safe, efficient crossings
+✔ Best balance of flow, safety, and waiting time
 
-Average waiting time ≈ 3.1–3.2 minutes
-
-Smooth traffic flow achieved
-
-2️⃣ Simulation Studies (Comparative Analysis)
-
-Three independent simulation models were implemented, each running for 30 minutes:
-
-🔹 Simulation Study 1
-
-Increased traffic flow
-
-Modified speed and braking assumptions
-
-Result: ❌ Vehicle collisions at crossroad
-
-🔹 Simulation Study 2
-
-Reduced crossroad speed
-
-Adjusted acceleration/deceleration
-
-Result: ❌ Crossroad instability remained
-
-🔹 Simulation Study 3 (Final Model ✅)
-
-Optimized:
-
-Inter-arrival times
-
-Vehicle speeds
-
-Acceleration & deceleration parameters
-
-Result: ✅ Collision-free, stable, and efficient traffic flow
-
-📈 This model demonstrated the best balance between safety and efficiency.
-
-🛠️ Tools & Technologies Used
+📊 Key Results
+Model	Avg Travel Time	Avg Waiting Time	Status
+Baseline	~165 s	~190 s	✅ Stable
+Study 1	258 s	567 s	❌ Failed
+Study 2	388 s	927 s	❌ Failed
+Study 3	207 s	360 s	✅ Optimal
+🛠️ Tech Stack
 
 Python
 
 Jupyter Notebook
 
-Probabilistic Modeling
+Simulation Modeling
 
-Exponential Distribution
+Probabilistic Systems
 
-Inverse Transform Sampling
-
-Traffic Flow Simulation Framework
+Statistical Analysis
 
 Data Visualization
 
 Traffic density plots
 
-Flow and behavior graphs
+Flow & behavior graphs
 
-Statistical Analysis
-
-Average travel time
-
-Waiting time comparison
-
-Traffic throughput
-
-📂 Project Structure
-📁 Traffic-Control-Simulation
+📂 Repository Structure
+Traffic-Control-Simulation/
 │
 ├── baseline_simulation.ipynb
 ├── simulation_study1.ipynb
@@ -134,50 +117,38 @@ Traffic throughput
 ├── report.pdf
 └── README.md
 
-📊 Key Results
-Simulation Model	Avg Travel Time	Avg Waiting Time	Outcome
-Baseline	~165 s	~190 s	✅ Stable
-Study 1	258 s	567 s	❌ Crash
-Study 2	388 s	927 s	❌ Crash
-Study 3	207 s	360 s	✅ Optimal
-🔍 Insights & Learnings
+💡 Key Takeaways
 
 Speed alone does not guarantee safety
 
-Proper inter-arrival timing is critical
+Inter-arrival timing is critical in crossings
 
-Over-aggressive braking and acceleration lead to instability
+Small parameter changes can cause system failure
 
-Multiple simulation runs are essential for reliable conclusions
+Multiple simulations are essential for validation
 
-Small parameter changes can drastically affect system behavior
+🚀 Future Improvements
 
-🚀 Future Enhancements
+Multi-lane road modeling
 
-Introduce multi-lane roads
+Traffic signals & pedestrian crossings
 
-Add traffic signals or pedestrian crossings
+Evening traffic scenarios
 
-Model evening traffic scenarios
+Stochastic driver behavior
 
-Include stochastic driver behavior
+Urban-scale intersection simulations
 
-Scale simulation to urban intersections
+⭐ Why This Project Matters
 
-📚 References
+This project demonstrates:
 
-Key academic and module resources were used, including:
+End-to-end simulation design
 
-Lecture notes from NCI
+Strong analytical and optimization thinking
 
-Peer-reviewed research on traffic flow modeling
+Real-world application of probability & modeling
 
-Microscopic traffic simulation frameworks
+📌 Relevant for roles in Data Science, Simulation, Operations Research, and Optimization.
 
-(See full reference list in the project report)
-
-⭐ Final Note
-
-This project demonstrates a complete simulation lifecycle from assumptions and modeling to validation and optimization reflecting both technical rigor and analytical thinking.
-
-If you found this project insightful, feel free to ⭐ the repository!
+⭐ If you like this project, consider starring the repository!
