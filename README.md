@@ -1,4 +1,4 @@
-🚦 Traffic Control Simulation
+# 🚦 Traffic Control Simulation
 Modelling, Simulation & Optimization
 
 Author: Chinmay Mukim
