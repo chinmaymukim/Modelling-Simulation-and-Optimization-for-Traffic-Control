@@ -5,7 +5,7 @@ Author: Chinmay Mukim
 🎓 National College of Ireland | Modelling, Simulation & Optimization
 🧠 Python • Simulation • Probabilistic Modeling
 
-🔍 Overview
+🔍 Overview:
 
 A traffic flow simulation project that models and optimizes vehicle movement at a school–village crossroad intersecting a busy national road during morning rush hours.
 
